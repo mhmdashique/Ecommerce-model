@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Premium Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <!-- Modern Navigation -->
+    <nav class="modern-nav">
+        <div class="nav-wrapper">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h2 class="brand-name">StyleHub</h2>
+            </div>
+            
+            <div class="nav-center">
+                <div class="nav-menu">
+                    <a href="#home" class="nav-item active">
+                        <span class="nav-text">Home</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                    <a href="#shop" class="nav-item">
+                        <span class="nav-text">Collections</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                    <a href="#about" class="nav-item">
+                        <span class="nav-text">About</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                    <a href="#contact" class="nav-item">
+                        <span class="nav-text">Contact</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="search-container"></div>
+                <button class="action-btn cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="btn-badge" id="cartCount">0</span>
+                </button>
+                <div class="user-menu">
+                    <button class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">New Collection 2025</span>
+                <h1 class="hero-title">Timeless Elegance Meets Modern Style</h1>
+                <p class="hero-description">Discover our carefully curated collection of premium clothing designed for the modern individual who values quality and sophistication.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Shop Collection</button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-play"></i>
+                        View Lookbook
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=800&fit=crop" alt="Fashion Model">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Happy Customers</div>
+                <div class="stat-description">Satisfied clients worldwide</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Premium Products</div>
+                <div class="stat-description">Curated fashion items</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-number">4.9</div>
+                <div class="stat-label">Customer Rating</div>
+                <div class="stat-description">Average review score</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="shop" class="collections">
+        <div class="section-header">
+            <h2 class="section-title">Our Collections</h2>
+            <p class="section-subtitle">Carefully crafted pieces for every occasion</p>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="shirts">Shirts</button>
+                <button class="filter-btn" data-filter="jeans">Jeans</button>
+                <button class="filter-btn" data-filter="jackets">Jackets</button>
+                <button class="filter-btn" data-filter="dresses">Dresses</button>
+            </div>
+        </div>
+        
+        <div class="products-grid">
+            <div class="product-card" data-category="shirts">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=500&fit=crop" alt="Classic White Shirt">
+                    <div class="product-actions">
+                        <button class="quick-add" data-id="1" data-name="Classic White Shirt" data-price="89">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="product-badge sale">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Classic Shirt</h3>
+                    <p class="product-description">Premium cotton blend</p>
+                    <div class="product-rating">
+                        <div class="stars">★★★★★</div>
+                        <span>(24 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="offer-price">₹5,696</span>
+                        <span class="original-price">₹7,120</span>
+                        <span class="discount">20% OFF</span>
+                    </div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="jeans">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1475178626620-a4d074967452?w=400&h=500&fit=crop" alt="Premium Denim">
+                    <div class="product-actions">
+                        <button class="quick-add" data-id="2" data-name="Premium Denim" data-price="120">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="product-badge sale">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Premium Denim</h3>
+                    <p class="product-description">Sustainable fabric</p>
+                    <div class="product-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>(18 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="offer-price">₹9,600</span>
+                        <span class="original-price">₹12,000</span>
+                        <span class="discount">20% OFF</span>
+                    </div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="jackets">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1520975954732-35dd22299614?w=400&h=500&fit=crop" alt="Leather Jacket">
+                    <div class="product-actions">
+                        <button class="quick-add" data-id="3" data-name="Leather Jacket" data-price="199">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="product-badge sale">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Leather Jacket</h3>
+                    <p class="product-description">Genuine leather</p>
+                    <div class="product-rating">
+                        <div class="stars">★★★★★</div>
+                        <span>(67 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="offer-price">₹12,736</span>
+                        <span class="original-price">₹15,920</span>
+                        <span class="discount">20% OFF</span>
+                    </div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="accessories">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400&h=500&fit=crop" alt="Boys Cap">
+                    <div class="product-actions">
+                        <button class="quick-add" data-id="4" data-name="Boys Cap" data-price="65">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="product-badge sale">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Mens Cap</h3>
+                    <p class="product-description">Stylish baseball cap</p>
+                    <div class="product-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>(31 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="offer-price">₹5,200</span>
+                        <span class="original-price">₹6,800</span>
+                        <span class="discount">24% OFF</span>
+                    </div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="dresses">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop" alt="Summer Dress">
+                    <div class="product-actions">
+                        <button class="quick-add" data-id="5" data-name="Summer Dress" data-price="95">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="product-badge new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Summer Dress</h3>
+                    <p class="product-description">Floral print design</p>
+                    <div class="product-rating">
+                        <div class="stars">★★★★★</div>
+                        <span>(42 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="offer-price">₹7,600</span>
+                        <span class="original-price">₹10,000</span>
+                        <span class="discount">24% OFF</span>
+                    </div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+             <div class="product-card" data-category="shirts">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=500&fit=crop" alt="Casual Shirt">
+                    <div class="product-actions">
+                        <button class="quick-add" data-id="4" data-name="Casual Shirt" data-price="65">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Suites</h3>
+                    <p class="product-description">Relaxed fit</p>
+                    <div class="product-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>(31 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="offer-price">₹5,200</span>
+                        <span class="original-price">₹6,800</span>
+                        <span class="discount">24% OFF</span>
+                    </div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="dresses">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=500&fit=crop" alt="Evening Dress">
+                    <div class="product-actions">
+                        <button class="quick-add" data-id="6" data-name="Evening Dress" data-price="150">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="product-badge sale">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Evening Dress</h3>
+                    <p class="product-description">Elegant black dress</p>
+                    <div class="product-rating">
+                        <div class="stars">★★★★★</div>
+                        <span>(35 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="offer-price">₹9,120</span>
+                        <span class="original-price">₹12,000</span>
+                        <span class="discount">24% OFF</span>
+                    </div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="dresses">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=500&fit=crop" alt="Casual Dress">
+                    <div class="product-actions">
+                        <button class="quick-add" data-id="7" data-name="Casual Dress" data-price="80">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="product-badge sale">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Casual Dress</h3>
+                    <p class="product-description">Comfortable daily wear</p>
+                    <div class="product-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>(22 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="offer-price">₹4,800</span>
+                        <span class="original-price">₹6,400</span>
+                        <span class="discount">25% OFF</span>
+                    </div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="accessories">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1529958030586-3aae4ca485ff?w=400&h=500&fit=crop" alt="Designer Hat">
+                    <div class="product-actions">
+                        <button class="quick-add" data-id="8" data-name="Designer Hat" data-price="45">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button class="quick-view">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="product-badge sale">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Designer Hat</h3>
+                    <p class="product-description">Premium wool blend</p>
+                    <div class="product-rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>(28 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="offer-price">₹2,880</span>
+                        <span class="original-price">₹3,600</span>
+                        <span class="discount">20% OFF</span>
+                    </div>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Showcase -->
+    <section class="creative-showcase">
+        <div class="showcase-container">
+            <div class="showcase-header">
+                <h2 class="showcase-title">Style in Motion</h2>
+                <p class="showcase-subtitle">Experience fashion through interactive design</p>
+            </div>
+            <div class="interactive-gallery">
+                <div class="gallery-item">
+                    <div class="item-content">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=500&fit=crop" alt="Fashion 1">
+                        <div class="item-overlay">
+                            <h3>Urban Collection</h3>
+                            <p>Street-inspired designs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="item-content">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=500&fit=crop" alt="Fashion 2">
+                        <div class="item-overlay">
+                            <h3>Elegant Evening</h3>
+                            <p>Sophisticated styles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="item-content">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=500&fit=crop" alt="Fashion 3">
+                        <div class="item-overlay">
+                            <h3>Casual Comfort</h3>
+                            <p>Everyday essentials</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-modern">
+        <div class="testimonials-container">
+            <div class="section-header">
+                <h2 class="testimonials-title">What Our Clients Say</h2>
+                <p class="testimonials-subtitle">Real stories from our satisfied customers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card premium">
+                    <div class="card-header">
+                        <div class="quote-mark">"</div>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0</span>
+                        </div>
+                    </div>
+                    <p class="review-text">StyleHub transformed my wardrobe completely. The quality is exceptional and the style is exactly what I was looking for.</p>
+                    <div class="client-profile">
+                        <div class="avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="client-info">
+                            <h4>Sarah Johnson</h4>
+                            <span>Fashion Blogger</span>
+                        </div>
+                        <div class="verified">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="card-header">
+                        <div class="quote-mark">"</div>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0</span>
+                        </div>
+                    </div>
+                    <p class="review-text">Outstanding customer service and premium quality clothing. Every piece exceeded my expectations.</p>
+                    <div class="client-profile">
+                        <div class="avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="client-info">
+                            <h4>Michael Chen</h4>
+                            <span>Business Executive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="card-header">
+                        <div class="quote-mark">"</div>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0</span>
+                        </div>
+                    </div>
+                    <p class="review-text">The attention to detail and craftsmanship is remarkable. StyleHub is my go-to store.</p>
+                    <div class="client-profile">
+                        <div class="avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="client-info">
+                            <h4>Emma Rodriguez</h4>
+                            <span>Creative Director</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-toggle" id="chatToggle">
+            <div class="chat-icon">
+                <i class="fas fa-comments"></i>
+                <div class="chat-pulse"></div>
+            </div>
+            <div class="chat-notification">💬</div>
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="agent-info">
+                    <div class="agent-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" alt="Support Agent">
+                        <div class="online-status"></div>
+                    </div>
+                    <div class="agent-details">
+                        <h4>Sarah</h4>
+                        <span>Online Support</span>
+                    </div>
+                </div>
+                <button class="chat-close" id="chatClose">×</button>
+            </div>
+            <div class="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-avatar">👋</div>
+                    <div class="message-content">
+                        <div class="message-text">Hi! I'm Sarah from StyleHub. How can I help you today?</div>
+                        <div class="message-time">Just now</div>
+                    </div>
+                </div>
+                <div class="quick-replies">
+                    <button class="quick-reply">Size Guide</button>
+                    <button class="quick-reply">Shipping Info</button>
+                    <button class="quick-reply">Returns</button>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message..." id="chatInput">
+                <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Size Guide Modal -->
+    <div class="modal-overlay" id="sizeGuideModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title-section">
+                    <div class="modal-icon">
+                        <i class="fas fa-ruler"></i>
+                    </div>
+                    <div>
+                        <h3>Size Guide</h3>
+                        <p>Find your perfect fit</p>
+                    </div>
+                </div>
+                <button class="modal-close" id="closeSizeGuide">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="size-tabs">
+                    <button class="size-tab active" data-category="shirts">Shirts</button>
+                    <button class="size-tab" data-category="jeans">Jeans</button>
+                    <button class="size-tab" data-category="jackets">Jackets</button>
+                </div>
+                <div class="size-chart">
+                    <div class="chart-header">
+                        <h4>Measurement Guide</h4>
+                        <div class="measurement-tips">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Measure in inches for best accuracy</span>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>Chest (inches)</th>
+                                <th>Waist (inches)</th>
+                                <th>Length (inches)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="size-badge">S</span></td>
+                                <td>36-38</td>
+                                <td>30-32</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td><span class="size-badge">M</span></td>
+                                <td>38-40</td>
+                                <td>32-34</td>
+                                <td>29</td>
+                            </tr>
+                            <tr>
+                                <td><span class="size-badge">L</span></td>
+                                <td>40-42</td>
+                                <td>34-36</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td><span class="size-badge">XL</span></td>
+                                <td>42-44</td>
+                                <td>36-38</td>
+                                <td>31</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="size-calculator">
+                    <h4>Size Calculator</h4>
+                    <div class="calculator-inputs">
+                        <input type="number" placeholder="Chest (inches)" id="chestInput">
+                        <input type="number" placeholder="Waist (inches)" id="waistInput">
+                        <button class="calculate-btn">Find My Size</button>
+                    </div>
+                    <div class="recommended-size" id="recommendedSize"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-title">Crafting Excellence Since 2020</h2>
+                    <p class="about-description">At StyleHub, we believe that great fashion starts with exceptional materials and meticulous craftsmanship. Our team of designers and artisans work tirelessly to create pieces that not only look beautiful but feel incredible to wear.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h4>Sustainable Materials</h4>
+                                <p>Eco-friendly fabrics and ethical sourcing</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Premium Quality</h4>
+                                <p>Handpicked materials and expert craftsmanship</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <div>
+                                <h4>Fast Delivery</h4>
+                                <p>Free shipping on orders over $100</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500&h=600&fit=crop" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 class="contact-title">Get In Touch</h2>
+                <p class="contact-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Our Store</h4>
+                            <p>123 Fashion Street, Style City, SC 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@stylehub.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StyleHub</h3>
+                    <p>Premium fashion for the modern individual. Quality, style, and sustainability in every piece.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop">Collections</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on new collections and exclusive offers.</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StyleHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart -->
+    <div class="shopping-cart" id="shoppingCart">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+                <button class="continue-shopping">Continue Shopping</button>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cartTotal">0</span></span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>

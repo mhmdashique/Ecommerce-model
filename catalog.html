@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Catalog - StyleHub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="catalog.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Floating Navigation -->
+    <nav class="floating-nav" id="floatingNav">
+      <div class="nav-brand">
+        <a
+          href="index.html"
+          style="
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          "
+        >
+          <div class="brand-icon">S</div>
+          <span>StyleHub</span>
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html#home" class="nav-item">Home</a>
+        <a href="catalog.html" class="nav-item active">Shop</a>
+        <a href="index.html#about" class="nav-item">About</a>
+        <a href="index.html#contact" class="nav-item">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search products..."
+            class="search-input"
+            id="searchInput"
+          />
+          <i class="fas fa-search search-icon"></i>
+        </div>
+        <button class="nav-btn cart-btn" id="cartToggle">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="nav-btn menu-btn" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Catalog Header -->
+    <section class="catalog-header">
+      <div class="catalog-hero">
+        <h1>Premium Collection</h1>
+        <p>
+          Explore our curated selection of high-quality fashion pieces, designed
+          for the modern individual who values style and sustainability
+        </p>
+        <div class="catalog-stats">
+          <div class="catalog-stat">
+            <span class="catalog-stat-number">200+</span>
+            <span class="catalog-stat-label">Products</span>
+          </div>
+          <div class="catalog-stat">
+            <span class="catalog-stat-number">50+</span>
+            <span class="catalog-stat-label">Brands</span>
+          </div>
+          <div class="catalog-stat">
+            <span class="catalog-stat-number">4.9★</span>
+            <span class="catalog-stat-label">Rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog Controls -->
+    <section class="catalog-controls">
+      <div class="controls-container">
+        <div class="filter-section">
+          <h3>Filters</h3>
+          <div class="filter-group">
+            <label>Category:</label>
+            <select id="categoryFilter">
+              <option value="all">All Categories</option>
+              <option value="shirts">Shirts</option>
+              <option value="jeans">Jeans</option>
+              <option value="jackets">Jackets</option>
+              <option value="hoodies">Hoodies</option>
+              <option value="dresses">Dresses</option>
+              <option value="shoes">Shoes</option>
+              <option value="accessories">Accessories</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Price Range:</label>
+            <select id="priceFilter">
+              <option value="all">All Prices</option>
+              <option value="0-50">$0 - $50</option>
+              <option value="50-100">$50 - $100</option>
+              <option value="100-200">$100 - $200</option>
+              <option value="200+">$200+</option>
+            </select>
+          </div>
+        </div>
+        <div class="sort-section">
+          <h3>Sort By</h3>
+          <select id="sortBy">
+            <option value="name">Name</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Rating</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="catalog-products">
+      <div class="products-container">
+        <div class="products-grid" id="productsGrid">
+          <!-- Products will be dynamically loaded here -->
+        </div>
+        <div class="pagination" id="pagination">
+          <!-- Pagination will be added here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="catalog-about">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>Why Choose StyleHub?</h2>
+          <p>
+            We believe fashion should be sustainable, accessible, and
+            expressive. Our curated collections blend timeless design with
+            contemporary trends, ensuring you always look and feel your best.
+          </p>
+          <div class="about-features">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h3>Eco-Friendly</h3>
+              <p>Sustainable materials and ethical production practices</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-shipping-fast"></i>
+              </div>
+              <h3>Fast Delivery</h3>
+              <p>Free shipping on orders over $50 with express delivery</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <h3>Premium Quality</h3>
+              <p>Hand-selected items from top designers worldwide</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="visual-grid">
+            <img
+              src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=300&h=400&fit=crop"
+              alt="Fashion"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=300&h=400&fit=crop"
+              alt="Style"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=300&h=400&fit=crop"
+              alt="Collection"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=400&fit=crop"
+              alt="Design"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="catalog-services">
+      <div class="services-container">
+        <div class="services-header">
+          <h2>Our Services</h2>
+          <p>Comprehensive fashion solutions tailored to your needs</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-styling"></i>
+            </div>
+            <h3>Personal Styling</h3>
+            <p>
+              Get expert fashion advice and personalized outfit recommendations
+              from our professional stylists.
+            </p>
+            <button class="service-btn">Learn More</button>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3>Express Delivery</h3>
+            <p>
+              Same-day delivery available in select areas. Free shipping on all
+              orders over $75.
+            </p>
+            <button class="service-btn">Track Order</button>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-undo"></i>
+            </div>
+            <h3>Easy Returns</h3>
+            <p>
+              30-day return policy with free return shipping. Hassle-free
+              exchanges and refunds.
+            </p>
+            <button class="service-btn">Return Policy</button>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>
+              Round-the-clock customer support. Get help with orders, sizing,
+              and styling anytime.
+            </p>
+            <button class="service-btn">Contact Us</button>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-gift"></i>
+            </div>
+            <h3>Gift Services</h3>
+            <p>
+              Beautiful gift wrapping and personalized messages. Gift cards
+              available for any amount.
+            </p>
+            <button class="service-btn">Shop Gifts</button>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-store"></i>
+            </div>
+            <h3>In-Store Experience</h3>
+            <p>
+              Visit our flagship stores for exclusive collections and personal
+              shopping experiences.
+            </p>
+            <button class="service-btn">Find Store</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="catalog-contact">
+      <div class="contact-container">
+        <div class="contact-content">
+          <h2>Get In Touch</h2>
+          <p>
+            Have questions about our products or services? We'd love to hear
+            from you. Send us a message and we'll respond as soon as possible.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>hello@stylehub.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4>Address</h4>
+                <p>123 Fashion Street<br />New York, NY 10001</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="contact-submit-btn">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="brand-icon">S</div>
+          <h3>StyleHub</h3>
+          <p>Fashion that speaks your language</p>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Shop</h4>
+            <a href="catalog.html">All Products</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Sale</a>
+          </div>
+          <div class="link-group">
+            <h4>Support</h4>
+            <a href="#">Contact Us</a>
+            <a href="#">Size Guide</a>
+            <a href="#">Returns</a>
+          </div>
+          <div class="link-group">
+            <h4>Follow</h4>
+            <div class="social-links">
+              <a href="#" title="Instagram">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png"
+                  alt="Instagram"
+                  class="social-image"
+                />
+              </a>
+              <a href="#" title="WhatsApp">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png"
+                  alt="WhatsApp"
+                  class="social-image"
+                />
+              </a>
+              <a href="#" title="X (Twitter)">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/1200px-X_logo_2023.svg.png"
+                  alt="X (Twitter)"
+                  class="social-image"
+                />
+              </a>
+              <a href="#" title="Facebook">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
+                  alt="Facebook"
+                  class="social-image"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 StyleHub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Floating Cart -->
+    <div class="floating-cart" id="floatingCart">
+      <div class="cart-header">
+        <h3>Shopping Cart</h3>
+        <button class="cart-close" id="cartClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="empty-cart">
+          <i class="fas fa-shopping-bag"></i>
+          <p>Your cart is empty</p>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">Total: $<span id="cartTotal">0</span></div>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="menu-header">
+        <div class="brand-icon">S</div>
+        <button class="menu-close" id="menuClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="menu-nav">
+        <a href="index.html#home">Home</a>
+        <a href="catalog.html">Shop</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <script src="catalog.js"></script>
+  </body>
+</html>
