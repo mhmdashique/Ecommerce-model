@@ -87,7 +87,7 @@ body {
 }
 
 .nav-menu {
-  display: none;
+  display: flex;
   gap: 2.5rem;
   background: rgba(0, 123, 255, 0.05);
   padding: 0.75rem 2rem;
@@ -143,7 +143,7 @@ body {
 
 /* Hamburger Menu */
 .hamburger-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
@@ -180,26 +180,21 @@ body {
 .mobile-nav-menu {
   position: fixed;
   top: 85px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 250px;
-  height: auto;
+  left: -100%;
+  width: 100%;
+  height: calc(100vh - 85px);
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
-  z-index: 1001;
-  display: none;
+  z-index: 1000;
+  display: flex;
   flex-direction: column;
-  padding: 1rem;
-  transition: opacity 0.3s ease;
+  padding: 2rem;
+  transition: left 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 123, 255, 0.1);
-  border-radius: 15px;
-  border: 1px solid rgba(0, 123, 255, 0.1);
-  opacity: 0;
 }
 
 .mobile-nav-menu.active {
-  display: block;
-  opacity: 1;
+  left: 0;
 }
 
 .mobile-nav-links {
@@ -1817,58 +1812,52 @@ body {
   right: -80px;
 }
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
+    .nav-menu {
+        display: none;
+    }
 
-  .hamburger-menu {
-    display: flex;
-  }
+    .hamburger-menu {
+        display: flex;
+    }
 
-  .nav-links {
-    display: none;
-  }
+    .nav-links {
+        display: none;
+    }
 
-  .mobile-nav-menu {
-    left: 0;
-    transform: none;
-    width: 100%;
-  }
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+    .hero-title {
+        font-size: 2.5rem;
+    }
 
-  .hero-title {
-    font-size: 2.5rem;
-  }
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
 
-  .stats-container {
-    grid-template-columns: 1fr;
-  }
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 
-  .products-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
 
-  .about-content,
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-  .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .shopping-cart {
+        width: 100%;
+        right: -100%;
+    }
 
-  .shopping-cart {
-    width: 100%;
-    right: -100%;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
 }
 /* Enhanced Live Chat Widget */
 .chat-widget {
